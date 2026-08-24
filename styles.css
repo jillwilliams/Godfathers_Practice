@@ -1,0 +1,1301 @@
+:root {
+    --darkgrey: #212329;
+    --brightred: #f94230;
+    --white: #fff;
+    --lightred: #f9433dcc;
+    --red: rgb(180,50,57);
+    --yellow: rgb(248,204,70);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* nav background */
+.nav-container {
+    width: 100%;
+    background-color: rgb(180,50,57);
+    position: fixed;
+    margin-top: -40px;
+    font-family: 'Nunito';
+    z-index: 10000;
+}
+
+/* set up for the navbar words */
+.navbar {
+    display: grid;
+    grid-template-columns: 0.2fr auto 1fr;
+    align-items: center;
+    height: 160px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* logo css */
+#navbar-logo {
+    justify-self: start;
+    margin-left: 20px;
+    padding-top: 40px;
+    width: 370px;
+    height: auto;
+}
+
+/* logo on hover */
+#navbar-logo:hover {
+    cursor: pointer;
+}
+
+/*  */
+.nav-menu {
+    display: grid;
+    grid-template-columns: repeat(7,auto);
+    list-style: none;
+    text-align: center;
+    width: 100%;
+    justify-self: end;
+}
+
+/* nav links */
+.nav-links {
+    color: white;
+    text-decoration: none; 
+    /* gets rid of the underline */
+    transition: 1s;
+}
+
+/* hover on navbar words/links */
+.nav-links:hover {
+    color: var(--darkgrey);
+    transition: 1s;
+}
+
+/* the button */
+.nav-links-btn {
+    background-color: black;
+    padding: 6px 16px;
+    color: var(--white);
+    border-radius: 8px;
+    border: 5px solid var(--yellow);
+    outline: 5px solid var(--red);
+    transition: 1s;
+}
+
+/* the button on hover */
+.nav-links-btn:hover {
+    background-color: var(--yellow);
+    padding: 6px 16px;
+    color: black;
+    border-radius: 8px;
+    border: 5px solid var(--yellow);
+    outline: 5px solid var(--darkgrey);
+    transition: 1s;
+}
+
+/* mobile section here */
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: 1s;
+    background-color: var(--white);
+}
+
+/* css for media query */
+@media screen and (max-width: 760px) {
+    .nav-container {
+        position: relative;
+    }
+    .nav-menu {
+        display: grid;
+        grid-template-columns: auto;
+        background-color: var(--brightred);
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: 160px;
+        left: -100%;
+        opacity: 0;
+        transition: 1s;
+    }
+    #navbar-logo {
+        margin-left: 20px;
+        margin-top: 35px;
+    }
+    .nav-menu.active {
+        background: var(--darkgrey);
+        left: 0;
+        opacity: 1;
+        transition: 1s;
+    }
+    .nav-links {
+        text-align: center;
+        line-height: 60px;
+        width: 100%;
+        display: table;
+    }
+    .nav-links:hover {
+        background-color: var(--brightred);
+        color: var(--white);
+        transition: 1s;
+    }
+    .navbar {
+        width: 100%;
+    }
+    .nav-links-btn {
+        border: none;
+        background-color: var(--brightred);
+        color: var(--white);
+        padding: 0;
+        transition: 1s;
+    }
+    .nav-links-btn:hover {
+        border: 2px black solid;
+        background-color: var(--darkgrey);
+        color: white;
+        border-radius: 0px;
+        transition: 1s;
+    }
+    #mobile-menu {
+        position: absolute;
+        /* down from the top */
+        top: 45%;
+        /* from the right */
+        right: 5%;
+        transform: translate(5%, 45%);
+    }
+    .menu-toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+    .menu-toggle:hover {
+        cursor: pointer;
+    }
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/* css media querry */
+@media screen and (max-width: 1040px) {
+    .nav-menu {
+        display: grid;
+        grid-template-columns: repeat(7,auto);
+        list-style: none;
+        text-align: center;
+        width: 100%;
+        justify-self: end;
+        font-size: 13px;
+        padding-top: 40px;
+    }
+    #navbar-logo {
+        justify-self: start;
+        margin-left: 20px;
+        padding-top: 40px;
+        width: 220px;
+        height: auto;
+    }
+}
+
+/* ==========begin limited time section========== */
+
+.template2 {
+    width: 100%;
+    min-height: auto;
+    background-color: #fff;
+    color: var(--red);
+    font-size: 40px;
+    line-height: 60px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 160px;
+    padding-bottom: 40px;
+    font-family: 'Yeseva One';
+}
+
+/* css for media query */
+@media screen and (max-width: 760px) {
+    .template2 {
+        font-size: 35px;
+        line-height: 40px;
+        margin-top: -120px;
+        font-weight: bold;
+        padding-top: 160px;
+        font-family: 'Yeseva One';
+    }
+}
+
+/* ==========img of pizza section=========== */
+
+.template3 {
+    background-image: url(images/taco_pizza.png);
+    width: 100%;
+    min-height: 50vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* text da good stuff */
+.template3 .title-text {
+    color: white;
+    z-index: 10000;
+    font-size: 100px;
+    font-family: 'Yeseva One';
+    text-align: center;
+}
+
+/* text: real cheese, fresh toppings... */
+.template3 p {
+    right: 15%;
+    color: white;
+    z-index: 10000;
+    font-size: 60px;
+    font-family: 'Yeseva One';
+    padding-top: 100px;
+}
+
+/* order now button */
+.template3 .button1 {
+    font-size: 20px;
+    padding: 20px 30px;
+    border-radius: 15px;
+    border: 10px solid var(--yellow);
+    outline: 5px solid var(--red);
+    background-color: black;
+    color: white;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    transition: 1s;
+}
+
+/* order now button */
+.template3 .button1:hover {
+    font-size: 20px;
+    padding: 20px 30px;
+    border-radius: 15px;
+    border: 10px solid var(--yellow);
+    outline: 5px solid var(--darkgrey);
+    background-color: var(--yellow);
+    color: black;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    transition: 1s;
+}
+
+/* the sign in text */
+.template3 .signin-text {
+    color: white;
+    text-decoration: underline;
+    font-size: 30px;
+    margin-top: -80px;
+}
+
+/* ============begin large image of girl section============ */
+
+.template4 {
+    width: 100%;
+    height: auto;
+    background-color: var(--red);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* yellow background */
+.template4 .background {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: var(--yellow);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* img of girl eating pizza */
+.template4 img {
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+/* text: it's not just pizza */
+.template4 .background h1 {
+    font-size: 50px;
+    /* font-family: "Tagesschrift", system-ui; */
+    font-family: 'Yeseva One';
+    padding: 25px;
+}
+
+/* text: paragraph: our pies... */
+.template4 .background p {
+    font-size: 30px;
+    font-family: 'Nunito';
+    padding: 20px 20px;
+}
+
+/* buttob menu */
+.template4 .background .button2 {
+    font-size: 20px;
+    padding: 20px 30px;
+    border-radius: 15px;
+    border: 10px solid var(--yellow);
+    outline: 5px solid var(--red);
+    background-color: black;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    transition: 1s;
+}
+
+.template4 .background .button2:hover {
+    font-size: 20px;
+    padding: 20px 30px;
+    border-radius: 15px;
+    border: 10px solid var(--yellow);
+    outline: 5px solid var(--darkgrey);
+    background-color: var(--yellow);
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    transition: 1s;
+}
+
+/* ===========loyalty club section============ */
+
+.template5 {
+    width: 100%;
+    min-height: auto;
+    background-color: var(--red);
+}
+
+/*  */
+.template5 .img-div {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+/* hand logo */
+.template5 img {
+    width: 100px;
+    height: auto;
+    margin-left: 100px; 
+    /* altering the right margin */
+}
+
+/* loyalty font */
+.template5 .loyalty-text {
+    font-family: 'Birthstone';
+    font-size: 80px;
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+
+/* club text */
+.template5 .club-text {
+    font-family: 'BenchNine';
+    font-size: 50px;
+    color: var(--yellow);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    padding-left: 10px;
+}
+
+/* text: show your loyalty, join da family */
+.template5 .loyalty-club {
+    font-size: 50px;
+    color: white;
+    font-family: 'Yeseva One';
+    padding-left: 100px;
+}
+
+/* the text: our new loyalty club... */
+.template5 .loyalty-club .loyalty {
+    font-family: 'Nunito';
+    font-size: 30px;
+    text-align: left;
+}
+
+/* learn more button */
+.template5 .loyalty-club .button3 {
+    font-size: 25px;
+    padding: 15px 20px;
+    border-radius: 15px;
+    border: 10px solid var(--yellow);
+    outline: 5px solid var(--red);
+    background-color: black;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    transition: 1s;
+}
+
+.template5 .loyalty-club .button3:hover {
+    font-size: 25px;
+    padding: 15px 20px;
+    border-radius: 15px;
+    border: 10px solid var(--yellow);
+    outline: 5px solid var(--darkgrey);
+    background-color: var(--yellow);
+    color: black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    transition: 1s;
+}
+
+/* css media querry */
+@media screen and (max-width: 1040px) {
+    .template5 .loyalty-club .button3 {
+        margin-left: 6px;
+    }
+    .template5 .loyalty-club .button3:hover {
+        margin-left: 6px;
+    }
+}
+
+/* ==========begin pizza on cutting board section========== */
+
+.template6 {
+    width: 100%;
+    min-height: auto;
+    background-color: var(--red);
+}
+
+@keyframes myAnimation {
+    0% {
+        top: 0px; 
+    }
+    25% {
+        top: 25px; 
+    }
+    50% {
+        top: 0px;
+    }
+    75% {
+        top: 25px;
+    }
+    100% {
+        top: 0px;
+    }
+}
+
+/* pizza div */
+.platter-pie {
+    position: relative;
+    z-index: 1;
+    min-height: 55vh;
+}
+
+/* image of the pizza on the cutting board */
+.template5 .loyalty-club .pizza {
+    width: 80%;
+    height: auto;
+    margin-top: -20%;
+    position: relative;
+    animation-name: myAnimation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+/* ===========begin yellow banner section 6========== */
+
+.banner-container {
+    overflow: hidden;
+    width: 100%;
+    background: var(--yellow);
+    color: black;
+    padding: 25px 0;
+    font-family: 'Nunito';
+}
+
+/* Flex track holding both identical content blocks */
+.banner-track {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 40s linear infinite;
+}
+
+/* Individual text blocks */
+.banner-content {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    padding-right: 40px; /* Must match the gap size */
+}
+
+/* Typography styles */
+.banner-content span {
+    font-size: 1.2rem;
+    white-space: nowrap;
+}
+
+/* Keyframes for seamless looping */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* ==========begin black and white photo section========== */
+
+.template7 {
+    width: 100%;
+    height: auto;
+    background-color: white;
+}
+
+.template7 .black-and-white img {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+}
+
+/* div for h1 */
+.template7 .always {
+    width: 80%;
+    margin: auto;
+}
+
+/* text: always over the top... */
+.template7 .always h1 {
+    font-size: 50px;
+    color: black;
+    text-align: left;
+    padding-top: 30px;
+    font-family: 'Yeseva One';
+}
+
+/* text: at godfather's pizza we don't skimp... */
+.template7 .always p {
+    font-family: 'Nunito';
+    font-size: 25px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+/* About us button */
+.template7 .button4 {
+    font-size: 20px;
+    padding: 15px 20px;
+    border-radius: 15px;
+    border: 10px solid var(--yellow);
+    outline: 5px solid var(--red);
+    background-color: black;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    transition: 1s;
+}
+
+/* About us button hover */
+.template7 .button4:hover {
+    font-size: 20px;
+    padding: 15px 20px;
+    border-radius: 15px;
+    border: 10px solid var(--yellow);
+    outline: 5px solid var(--darkgrey);
+    background-color: var(--yellow);
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    transition: 1s;
+}
+
+/* img building */
+.template7 img {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/* css media query */
+@media screen and (max-width: 760px) {
+    .template7 .button4 {
+        margin-left: 60px;
+    }
+    .template7 .button4:hover {
+        margin-left: 60px;
+    }
+}
+/* ==========begin spinning pizza section========== */
+
+.template8 {
+    width: 100%;
+    background-color: var(--yellow);
+    font-family: 'Yeseva One';
+    min-height: 120vh;
+}
+
+/* text: indulge in pizza....... */
+.template8 h1 {
+    font-size: 50px;
+    padding-top: 80px;
+    text-align: center;
+}
+
+/*  */
+.template8 .pepp-pizza img {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    transform-origin: center; 
+    padding-top: 60px;
+    padding-bottom: 40px;
+    animation-name: pizzaAnimation;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    z-index: 999;
+    position: relative;
+
+}
+
+.template8 .banner-container {
+    overflow: hidden;
+    width: 100%;
+    background: var(--yellow);
+    color: black;
+    padding: 25px 0;
+    font-family: 'Nunito';
+    z-index: -999;
+    margin-top: -700px !important;
+}
+
+/* Flex track holding both identical content blocks */
+.template8 .banner-track {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 40s linear infinite;
+}
+
+/* Individual text blocks */
+.template8 .banner-content {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    padding-right: 40px; /* Must match the gap size */
+}
+
+/* Typography styles */
+.template8 .banner-content span {
+    font-size: 1.2rem;
+    white-space: nowrap;
+}
+
+/* ------------------banner 2--------------------------- */
+
+.template8 .banner-container2 {
+    overflow: hidden;
+    width: 100%;
+    background: var(--yellow);
+    color: black;
+    padding: 25px 0;
+    font-family: 'Nunito';
+    z-index: -999;
+    margin-top: 10px;
+}
+
+/* Flex track holding both identical content blocks */
+.template8 .banner-track2 {
+    display: flex;
+    width: max-content;
+    animation: scroll-right 40s linear infinite;
+}
+
+/* Individual text blocks */
+.template8 .banner-content2 {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    padding-right: 40px; /* Must match the gap size */
+}
+
+/* Typography styles */
+.template8 .banner-content2 span {
+    font-size: 1.2rem;
+    white-space: nowrap;
+}
+
+/* =================banner3================ */
+.template8 .banner-container3 {
+    overflow: hidden;
+    width: 100%;
+    background: var(--yellow);
+    color: black;
+    padding: 25px 0;
+    font-family: 'Nunito';
+    z-index: -999;
+    margin-top: 10px;
+}
+
+/* Flex track holding both identical content blocks */
+.template8 .banner-track3 {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 40s linear infinite;
+}
+
+/* Individual text blocks */
+.template8 .banner-content3 {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    padding-right: 40px; /* Must match the gap size */
+}
+
+/* Typography styles */
+.template8 .banner-content3 span {
+    font-size: 1.2rem;
+    white-space: nowrap;
+}
+
+/* Keyframes for seamless looping */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* banner 2 */
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes pizzaAnimation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+    from {
+        transform: rotate(-360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+/* css media querry */
+@media screen and (max-width: 760px) {
+    .template8 .banner-container {
+        margin-top: -310px;
+    }
+}
+
+/* css media querry */
+@media screen and (max-width: 1040px) {
+    .template8 {
+        min-height: 90vh;
+    }
+    .template8 .banner-container {
+        overflow: hidden;
+        margin-top: -420px !important;
+    }
+}
+
+/* =========begin taco pizza feast section 9========== */
+
+.template9 {
+    width: 100%;
+    height: auto;
+    background-color: var(--red);
+    padding-top: 30px;
+}
+
+/* img div */
+.template9 .feast-section {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    align-content: center;
+}
+
+/* taco feast image */
+.template9 .taco-feast {
+    width: 30%;
+    margin-left: 16%;
+    margin-top: 60px;
+}
+
+/* poppin pickle image */
+.template9 .poppin {
+    width: 30%;
+    margin-right: 16%;
+    margin-left: 60px;
+}
+
+/* text: hot and fresh deals... */
+.template9 h1 {
+    font-family: 'Yeseva One';
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    text-align: left;
+    margin-left: 16%;
+    padding-top: 40px;
+}
+
+/* text: click below... */
+.template9 p {
+    font-size: 20px;
+    color: white;
+    margin-left: 16%;
+    padding-top: 30px;
+    font-family: 'Nunito';
+}
+
+/* order now button */
+.template9 .button5 {
+    font-size: 20px;
+    padding: 15px 20px;
+    border-radius: 15px;
+    border: 10px solid var(--yellow);
+    outline: 5px solid var(--red);
+    background-color: black;
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 300px;
+    transition: 1s;
+}
+
+/* order now button */
+.template9 .button5:hover {
+    font-size: 20px;
+    padding: 15px 20px;
+    border-radius: 15px;
+    border: 10px solid var(--yellow);
+    outline: 5px solid var(--darkgrey);
+    background-color: var(--yellow);
+    color: black;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 140px;
+    transition: 1s;
+}
+
+/* css media querry */
+@media screen and (max-width: 760px) {
+    .template9 .taco-feast {
+        width: 30%;
+        margin-left: 16%;
+        margin-top: 60px;
+    } 
+    .template9 .poppin {
+        width: 30%;
+        margin-right: 16%;
+        margin-left: 30px;
+    }  
+    .template9 .button5 {
+        margin-left: 85px;
+    }
+}
+
+/* css media querry */
+@media screen and (max-width: 1040px) {
+    .template9 .button5 {
+        margin-left: 150px;
+    }
+    .template9 .button5:hover {
+        margin-left: 150px;
+    }
+}
+
+/* ===========begin banner section #2========== */
+
+.banner-container {
+    overflow: hidden;
+    width: 100%;
+    background: var(--yellow);
+    color: black;
+    padding: 25px 0;
+    font-family: 'Nunito';
+    z-index: 999;
+    /* font-weight: bold; */
+}
+
+/* Flex track holding both identical content blocks */
+.banner-track {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 40s linear infinite;
+}
+
+/* Individual text blocks */
+.banner-content {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    padding-right: 40px; /* Must match the gap size */
+}
+
+/* Typography styles */
+.banner-content span {
+    font-size: 1.2rem;
+    white-space: nowrap;
+}
+
+/* Keyframes for seamless looping */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* ===========begin customer review section 11========== */
+
+.template11 {
+    width: 100%;
+    height: auto;
+    background-color: var(--white);
+}
+
+/* text: real stories .... */
+.template11 .real-stories {
+    font-family: 'Yeseva One';
+    font-size: 25px;
+    padding-top: 120px;
+    padding-left: 80px;
+    text-align: left;
+}
+
+/* arrows */
+#left-arrow {
+    border: 10px var(--yellow) solid;
+    outline: 5px var(--red) solid;
+    border-radius: 50%;
+    color: black;
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+    margin-right: 5px;
+    margin-left: 80%;
+}
+
+#right-arrow {
+    border: 10px var(--yellow) solid;
+    outline: 5px var(--red) solid;
+    border-radius: 50%;
+    color: black;
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+    margin-left: 5px;
+}
+
+/* star ratings */
+.template11 .stars {
+    color: var(--yellow);
+    padding-left: 80px;
+    letter-spacing: 3px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    text-align: left;
+}
+
+/* text: customer review */
+.template11 .rating {
+    font-family: 'Nunito';
+    font-size: 20px;
+    padding-left: 80px;
+    padding-top: 5px;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+}
+
+/* pizza img */
+#pepp-img {
+    width: 150px;
+    height: auto;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+/* div for customer name */
+.template11 .customer-info {
+    font-family: 'Benchnine';
+    padding-left: 80px;
+}
+
+/* text: rhonda day */
+.template11 .customer-info h1 {
+    border-left: 2px black solid;
+    padding-left: 20px;
+    font-size: 30px;
+}
+
+/* text: customer */
+.template11 .customer-info p {
+    border-left: 2px black solid;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 760px) {
+    .template11 .real-stories {
+        padding-left: 50px;
+    }
+    .template11 .stars {
+        padding-left: 50px;
+    }
+    .template11 .rating {
+        padding-left: 50px;
+    }
+    #left-arrow {
+        margin-right: 5px;
+        margin-left: 65%;
+        margin-top: 30px;
+    }
+    #pepp-img {
+        width: 160px;
+        height: auto;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    .template11 .customer-info {
+        padding-left: 50px;
+    }
+    .template11 .customer-info h1 {
+        margin-top: 30px;
+        padding-left: 10px;
+    }
+    .template11 .customer-info p {
+        padding-left: 10px;
+    }
+}
+/* ====begin swiper customer comment section 12====== */
+
+.container {
+    width: 80%;
+    height: 50vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/* swiper container */
+.swiper {
+    width: 60%;
+    height: fit-content;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+/* image size */
+.swiper-slide img {
+    width: 100%;
+}
+
+/* turn the forward and backward buttons' color */
+.swiper .swiper-button-prev, .swiper .swiper-button-next {
+    color: var(--red);
+    font-size: 40px;
+}
+
+/* turn little buttons colors */
+.swiper .swiper-pagination-bullet-active {
+    background: var(--red);
+    margin-top: -20px;
+}
+
+/* css media querry */
+@media screen and (max-width: 760px) {
+    .container {
+        margin-top: 0px;
+    }
+}
+
+/* css media querry */
+@media screen and (max-width: 1040px) {
+    .container {
+        margin-top: 100px;
+    }
+}
+
+/* ==========begin footer section 14=========== */
+
+.template14 {
+    width: 100%;
+    height: auto;
+    background-color: var(--red);
+    margin-top: 400px;
+}
+
+/* table div css */
+.template14 .headings {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    color: white;
+    font-family: 'Benchnine';
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* table css */
+.template14 table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-spacing: 30px;
+    margin: 0;
+    padding: 10px;
+    gap: 40px;
+    width: 100%;
+}
+
+/* icons */
+.fa-square-facebook, .fa-square-x-twitter, .fa-youtube, .fa-square-pinterest, .fa-instagram {
+    color: var(--yellow);
+    padding: 5px;
+    list-style-type: none;
+    background-image: none;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* removing dots in the icons */
+.template14 a {
+    text-decoration: none;
+}
+
+/* text: about us, get in touch, extras */
+.template14 th {
+    font-weight: bold;
+    font-size: 30px;
+    text-align: left;
+}
+
+/* text in the columns */
+.template14 td {
+    text-align: left;
+    height: 20px;
+    vertical-align: top;
+    font-size: 20px;
+}
+
+/* coca-cola bottle img */
+.template14 .coca-cola {
+    width: 40px;
+}
+
+/* heart hands img */
+.template14 .heart-hands {
+    width: 40px;
+}
+
+/* css media querry */
+@media screen and (max-width: 760px) {
+    .template14 {
+        margin-top: 40px;
+    }
+    .template14 table {
+        display: grid;
+        justify-content: left;
+        align-items: left;
+        border-spacing: 20px;
+        padding: 5px;
+        gap: 20px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    .template14 {
+        width: 100%;
+        height: auto;
+        background-color: var(--red);
+        margin-top: 120px;
+    }
+}
+
+/* =====terms and conditions footer section 15======= */
+
+.template15 {
+    width: 100%;
+    height: auto;
+    background-color: var(--red);
+    padding-top: 40px;
+    text-align: center;
+}
+
+/* text: terms and conditions, privacy policy, etc */
+.template15 .headings {
+    font-family: 'Yeseva One';
+    display: flex;
+    flex-direction: row;
+    color: white;
+    font-size: 13px;
+    gap: 40px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+/* text below headings: 2,000 calories a day... */
+.template15 .descriptions {
+    font-family: 'Nunito';
+    font-size: 15px;
+    color: white;
+    line-height: 30px;
+}
+
+/* css media querry */
+@media screen and (max-width: 760px) {
+    .template15 .headings {
+        font-size: 10px;
+        gap: 10px;
+        margin-left: -15px;
+        margin-right: 10px;
+    }
+}
+
+/* css media querry */
+@media screen and (max-width: 1040px) {
+    .template15 .headings {
+        font-size: 10px;
+        gap: 40px;
+        margin-left: 21%;
+        margin-right: 21%;
+    }
+}
+
+
+/* ==========The End========== */
