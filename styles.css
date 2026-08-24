@@ -55,6 +55,7 @@
     text-align: center;
     width: 100%;
     justify-self: end;
+    margin-top: 40px;
 }
 
 /* nav links */
@@ -121,7 +122,7 @@
     }
     #navbar-logo {
         margin-left: 20px;
-        margin-top: 35px;
+        margin-top: 0px;
     }
     .nav-menu.active {
         background: var(--darkgrey);
@@ -193,7 +194,7 @@
         width: 100%;
         justify-self: end;
         font-size: 13px;
-        padding-top: 40px;
+        padding-top: 5px;
     }
     #navbar-logo {
         justify-self: start;
@@ -668,7 +669,6 @@
     animation-iteration-count: infinite;
     z-index: 999;
     position: relative;
-
 }
 
 .template8 .banner-container {
@@ -941,7 +941,6 @@
     padding: 25px 0;
     font-family: 'Nunito';
     z-index: 999;
-    /* font-weight: bold; */
 }
 
 /* Flex track holding both identical content blocks */
