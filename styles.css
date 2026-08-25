@@ -847,10 +847,32 @@
         font-size: 30px;
     }
     .template8 .banner-container {
-        margin-top: -290px !important;
+        margin-top: -250px !important;
+        padding: 10px 0;
     }
     .template8 .banner-container2 {
         margin-top: 10px !important;
+        padding: 10px 0;
+    }
+    .template8 .banner-container3 {
+        margin-top: 10px !important;
+        padding: 10px 0;
+    }
+    .template8 .pepp-pizza img {
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .template8 .banner-content span {
+        font-size: 15px;
+    }
+    .template8 .banner-content2 span {
+        font-size: 15px;
+    }
+    .template8 .banner-content3 span {
+        font-size: 15px;
     }
 }
 
@@ -949,31 +971,36 @@
 /* css media querry */
 @media screen and (max-width: 760px) {
     /* text: hot and fresh deals... */
+    .template9 {
+        padding-top: 10px;
+    }
+    
     .template9 h1 {
-        font-size: 30px;
+        font-size: 25px;
         text-align: left;
-        margin-left: 13%;
+        margin-left: 20px;
         padding-top: 40px;
     }
     .template9 .taco-feast {
         width: 30%;
-        margin-left: 16%;
-        margin-top: 60px;
+        margin-left: 40px;
+        margin-top: 40px;
     } 
     .template9 .poppin {
         width: 30%;
-        margin-right: 16%;
-        margin-left: 30px;
+        margin-right: 20px;
+        margin-left: 40px;
     }  
     .template9 .button5 {
-        margin-left: 60px !important;
+        margin-left: 20px !important;
     }
     .template9 .button5:hover {
-        margin-left: 60px !important;
+        margin-left: 20px !important;
     }
     /* text: click below... */
     .template9 p {
-        margin-left: 13%;
+        margin-left: 20px;
+        font-size: 20px;
     }
 }
 
@@ -1123,6 +1150,7 @@
 @media screen and (max-width: 760px) {
     .template11 .real-stories {
         padding-left: 50px;
+        padding-top: 40px;
     }
     .template11 .stars {
         padding-left: 50px;
@@ -1139,19 +1167,21 @@
         margin-right: 40px;
     }
     .template11 .customer-info {
-        padding-left: 50px;
+        padding-left: 40px;
     }
     .template11 .customer-info h1 {
         margin-top: 30px;
-        margin-left: 30px;
+        margin-left: 5px;
         padding-left: 10px;
     }
     .template11 .customer-info p {
         padding-left: 10px;
-        margin-left: 30px;
+        margin-left: 5px;
     }
     .template11 .rating {
         font-size: 20px;
+        padding-left: 30px;
+        padding-top: 5px;
     }
 }
 /* ====begin swiper customer comment section 12====== */
@@ -1282,17 +1312,27 @@
 /* css media querry */
 @media screen and (max-width: 760px) {
     .template14 {
-        margin-top: 40px;
+        margin-top: 30px !important;
     }
     .template14 table {
-        display: grid;
-        justify-content: left;
-        align-items: left;
         border-spacing: 20px;
+        margin: 0;
         padding: 5px;
-        gap: 20px;
+        gap: 10px;
         width: 100%;
+        padding-left: 20px !important;
+        padding-right: 0px !important
     }
+    .template14 th {
+        font-weight: bold;
+        font-size: 20px;
+        text-align: left;
+    }
+    .template14 td {
+        text-align: left;
+        vertical-align: top;
+        font-size: 15px;
+    }    
 }
 
 @media screen and (max-width: 1040px) {
