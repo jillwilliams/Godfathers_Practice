@@ -329,7 +329,6 @@
 /* text: it's not just pizza */
 .template4 .background h1 {
     font-size: 50px;
-    /* font-family: "Tagesschrift", system-ui; */
     font-family: 'Yeseva One';
     padding: 25px;
 }
@@ -457,6 +456,21 @@
     transition: 1s;
 }
 
+@media screen and (max-width: 760px) {
+    .template5 img {
+        margin-left: 35px; 
+    }
+    /* text: show your loyalty, join da family */
+    .template5 .loyalty-club {
+        font-size: 40px;
+        padding-left: 40px;
+    }
+    /* the text: our new loyalty club... */
+    .template5 .loyalty-club .loyalty {
+        font-size: 25px;
+    }
+}
+
 /* css media querry */
 @media screen and (max-width: 1040px) {
     .template5 .loyalty-club .button3 {
@@ -509,6 +523,13 @@
     animation-name: myAnimation;
     animation-duration: 10s;
     animation-iteration-count: infinite;
+}
+
+@media screen and (max-width: 760px) {
+    /* pizza div */
+    .platter-pie {
+        min-height: 35vh;
+    }
 }
 
 /* ===========begin yellow banner section 6========== */
@@ -633,16 +654,20 @@
 /* css media query */
 @media screen and (max-width: 760px) {
     .template7 .button4 {
-        margin-left: 60px;
+        margin-left: 50px !important;
     }
     .template7 .button4:hover {
-        margin-left: 60px;
+        margin-left: 40px;
     }
 }
 
 /* css media query */
 @media screen and (max-width: 1040px) {
     .template7 .button4 {
+        margin-left: 80px;
+        transition: 1s;
+    }
+    .template7 .button4:hover {
         margin-left: 80px;
         transition: 1s;
     }
@@ -814,8 +839,18 @@
 
 /* css media querry */
 @media screen and (max-width: 760px) {
+    .template8 {
+        min-height: 70vh !important;
+    }
+    /* text: indulge in pizza....... */
+    .template8 h1 {
+        font-size: 30px;
+    }
     .template8 .banner-container {
-        margin-top: -310px;
+        margin-top: -290px !important;
+    }
+    .template8 .banner-container2 {
+        margin-top: 10px !important;
     }
 }
 
@@ -913,6 +948,13 @@
 
 /* css media querry */
 @media screen and (max-width: 760px) {
+    /* text: hot and fresh deals... */
+    .template9 h1 {
+        font-size: 30px;
+        text-align: left;
+        margin-left: 13%;
+        padding-top: 40px;
+    }
     .template9 .taco-feast {
         width: 30%;
         margin-left: 16%;
@@ -924,7 +966,14 @@
         margin-left: 30px;
     }  
     .template9 .button5 {
-        margin-left: 85px;
+        margin-left: 60px !important;
+    }
+    .template9 .button5:hover {
+        margin-left: 60px !important;
+    }
+    /* text: click below... */
+    .template9 p {
+        margin-left: 13%;
     }
 }
 
@@ -1032,7 +1081,7 @@
     text-align: left;
 }
 
-/* text: customer review */
+/* text: customer review text */
 .template11 .rating {
     font-family: 'Nunito';
     font-size: 20px;
@@ -1078,17 +1127,14 @@
     .template11 .stars {
         padding-left: 50px;
     }
-    .template11 .rating {
-        padding-left: 50px;
-    }
     #left-arrow {
         margin-right: 5px;
         margin-left: 65%;
         margin-top: 30px;
     }
     #pepp-img {
-        width: 160px;
-        height: auto;
+        width: 200px;
+        height: 120px;
         margin-left: 40px;
         margin-right: 40px;
     }
@@ -1097,10 +1143,15 @@
     }
     .template11 .customer-info h1 {
         margin-top: 30px;
+        margin-left: 30px;
         padding-left: 10px;
     }
     .template11 .customer-info p {
         padding-left: 10px;
+        margin-left: 30px;
+    }
+    .template11 .rating {
+        font-size: 20px;
     }
 }
 /* ====begin swiper customer comment section 12====== */
@@ -1286,10 +1337,9 @@
 /* css media querry */
 @media screen and (max-width: 760px) {
     .template15 .headings {
-        font-size: 10px;
-        gap: 10px;
-        margin-left: -15px;
-        margin-right: 10px;
+        font-size: 7px !important;
+        gap: 55px !important;
+        margin-left: 10px !important;
     }
 }
 
